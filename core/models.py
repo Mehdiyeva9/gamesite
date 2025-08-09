@@ -61,3 +61,38 @@ class Founder(models.Model):
 
     def __str__(self):
         return self.name
+    
+class SocialMedia(models.Model):
+    name = models.CharField(max_length=30)
+    link = models.URLField(max_length=250)
+
+    def __str__(self):
+        return self.name
+    
+class SiteSettings(models.Model):
+    header_title = models.CharField(max_length=50)
+    header_txt = models.CharField(max_length=150)
+    playstore_link = models.URLField(max_length=250)
+    appstore_link = models.URLField(max_length=250)
+    about_title = models.CharField(max_length=300)
+    about_text = models.TextField()
+    about_image = models.ImageField(upload_to="gamepro_imgs/")
+    about_text2 = models.TextField()
+    about_text3 = HTMLField()
+    about_officces = models.TextField()
+    our_games = models.TextField()
+    subscribe_mail = models.EmailField(max_length=256)
+    website = models.URLField(max_length=250)
+    phone_number = models.CharField(max_length=12)
+    location = models.CharField(max_length=100)
+
+    class Meta:
+        verbose_name_plural = "Settings"
+
+    def __str__(self):
+        return "Settings"
+
+    def save(self, *args, **kwargs):
+        if not self.id and SiteSettings.objects.exists():
+            pass
+        return super(SiteSettings, self).save(*args, **kwargs)
