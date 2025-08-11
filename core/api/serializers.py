@@ -25,3 +25,23 @@ class CareerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Career
         fields = "__all__"
+
+class CareerFormSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CareerForm
+        fields = "__all__"
+
+class FounderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Founder
+        fields = "__all__"
+
+class SocialMediaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SocialMedia
+        fields = "__all__"
+
+class SiteSettingsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SiteSettings
+        fields = "__all__"
