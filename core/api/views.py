@@ -25,3 +25,19 @@ class ContactFormCreateAPIView(CreateAPIView):
 class CareerListAPIView(ListAPIView):
     queryset = Career.objects.all()
     serializer_class = CareerSerializer
+
+class CareerFormCreateAPIView(CreateAPIView):
+    queryset = CareerForm.objects.all()
+    serializer_class = CareerFormSerializer
+
+class FounderListAPIView(ListAPIView):
+    queryset = Founder.objects.all()
+    serializer_class = FounderSerializer
+
+class SocialMediaListAPIView(ListAPIView):
+    queryset = SocialMedia.objects.all()
+    serializer_class = SocialMediaSerializer
+
+class SiteSettingsListAPIView(ListAPIView):
+    queryset = SiteSettings.objects.all()
+    serializer_class = SiteSettingsSerializer
