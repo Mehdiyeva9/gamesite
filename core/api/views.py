@@ -13,6 +13,7 @@ class GameListAPIView(ListAPIView):
 class GameRetrieveAPIView(RetrieveAPIView):
     queryset = Game.objects.all()
     serializer_class = GameRetrieveSerializer
+    lookup_field = "id"
 
 class GameCommentListAPIView(ListAPIView):
     queryset = GameComment.objects.all()
