@@ -7,4 +7,9 @@ urlpatterns = [
     path('game-retrieve/<id>/', views.GameRetrieveAPIView.as_view()),
     path('game-comment-list/', views.GameCommentListAPIView.as_view()),
     path('contactform-create/', views.ContactFormCreateAPIView.as_view()),
+    path('career-list/', views.CareerListAPIView.as_view()),
+    path('careerform-create/', views.CareerFormCreateAPIView.as_view()),
+    path('founder-list/', views.FounderListAPIView.as_view()),
+    path('socialmedia-list/', views.SocialMediaListAPIView.as_view()),
+    path('sitesettings-list/', views.SiteSettingsListAPIView.as_view())
 ]
